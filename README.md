@@ -8,3 +8,32 @@ The attack does NOT rely on software vulnerabilities, but instead exploits:
 - Cached credentials
 - Unsafe administrator behavior
 
+---
+
+## Lab Environment
+- Windows Server (Domain Controller) 
+- Windows 10 (Client)
+- Kali Linux (Attacker)
+- VirtualBox
+
+---
+
+## Tools Used
+- Nmap
+- Kerbrute
+- CrackMapExec
+- THC Hydra
+- Mimikatz
+
+---
+
+## Attack Flow
+1. Network reconnaissance using Nmap
+2. Username enumeration using kerbrute
+3. Password brute-force using Hydra
+4. RDP access to workstation
+5. Credential extraction (cache admin credentials)
+6. Privilege escalation to Domain Administrator
+
+---
+
