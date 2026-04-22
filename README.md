@@ -10,7 +10,7 @@ The attack does NOT rely on software vulnerabilities, but instead exploits:
 
 ---
 
-## 🖥️ Lab Environment 🖥️
+## Lab Environment
 - Windows Server (Domain Controller) 
 - Windows 10 (Client)
 - Kali Linux (Attacker)
@@ -18,7 +18,7 @@ The attack does NOT rely on software vulnerabilities, but instead exploits:
 
 ---
 
-## ⚙️ Tools Used ⚙️
+## Tools Used
 - Nmap
 - Kerbrute
 - CrackMapExec
@@ -27,7 +27,7 @@ The attack does NOT rely on software vulnerabilities, but instead exploits:
 
 ---
 
-## ⚔️ Attack Flow ⚔️
+## Attack Flow
 1. Network reconnaissance using Nmap
 2. Username enumeration using kerbrute
 3. Password brute-force using Hydra
@@ -38,3 +38,24 @@ The attack does NOT rely on software vulnerabilities, but instead exploits:
 ---
 
 Result
+Full domain compromise achieved by:
+- Reusing cached Domain Admin credentials
+- Adding attacker-controlled user into Domain Admin Group
+
+---
+
+## Security Lessons
+- Enforce strong password policies
+- Avoid admin login on user machines
+- Restrict RDP access
+
+--- 
+
+## Full report
+See the full documentation here:
+--> [ProjectWindowsActiveDirectoryPentest](./ProjectWindowsActiveDirectoryPentest.pdf) <--
+
+---
+
+Author 
+- KiMiRoTa
