@@ -29,18 +29,31 @@ The attack does NOT rely on software vulnerabilities, but instead exploits:
 
 ## Attack Flow
 ### 1. Reconnaissance (Nmap)
-Scanning the Domain Controller to identify open services.
+The attacker scans the Domain Controller to identify open ports and services such as Kerberos, LDAP, SMB, and DNS.
 ![Nmap Scan](./Images/NmapScan.png)
 ![Nmap Scan](./Images/NmapPortScan.png)
 ![Nmap Scan](./Images/NmapPortScan2.png)
 
 ### 2. Username Enumeration (Kerbrute)
-Identifying valid domain users without needing passwords.
+Kerbrute is used to identify valid  usernames in the domain without requiring passwords.
 ![Kerbrute](./Images/kerbrute.png)
 
-### 3. Password Brute Force (Hydra)
-Brute-forcing RDP login credentials.
+### 3. SMB Enumeration (CrackMapExec)
+CrackMapExec is used to gathe information from the Domain Controller via SMB services.
+![CrackMapExec](./Images/CrackMapExec.png)
 
+### 4. Password Brute Force (Hydra)
+A brute-force attack is performed against the RDP service using the valid username.
+![THC Hydra](./Images/THCHydra.png)
+
+### 5. Initial Access (RDP Login)
+Using the valid credentials, the attacker logs into the Windows 10 workstation via RDP.
+![RDP](./Images/RDPfromKali.png)
+
+### 6. privilege Escalation
+Since the Domain Administrator previously logged into the system, credentials are cached and can be extracted.
+![Escalation](./Images/Escalation1.png)
+![Escalation](./Images/Escalation2.png)
 
 ---
 
