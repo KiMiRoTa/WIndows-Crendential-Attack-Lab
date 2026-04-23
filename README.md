@@ -36,7 +36,7 @@ The attacker scans the Domain Controller to identify open ports and services suc
 
 ### 2. Username Enumeration (Kerbrute)
 Kerbrute is used to identify valid  usernames in the domain without requiring passwords.
-![Kerbrute](./Images/kerbrute.png)
+![Kerbrute](./Images/Kerbrute.png)
 
 ### 3. SMB Enumeration (CrackMapExec)
 CrackMapExec is used to gathe information from the Domain Controller via SMB services.
