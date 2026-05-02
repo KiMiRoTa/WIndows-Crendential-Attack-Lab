@@ -1,4 +1,4 @@
-# Windows 10 Crendential Attack Lab
+# Penetration Testing: Windows 10 Crendential Attack
 
 ## Overview
 This repository is my university project about simulating credential dumping and privilege escalation in a Windows Active Directory environment
